@@ -1,0 +1,51 @@
+name: Deploy
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - src/**
+      - tests/**
+      - .github/workflows/main.yml
+      - package.json
+      - tsconfig.json
+
+permissions:
+  contents: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: latest
+          cache: 'yarn'
+
+      - name: Install node dependencies
+        run: yarn --frozen-lockfile
+
+      - name: Lint
+        run: yarn lint
+
+      - name: Test
+        run: yarn testci
+
+      - name: Build
+        run: yarn build test
+
+      - name: Deploy
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RELEASE_TAG: latest
+          RELEASE_TITLE: Build
+          RELEASE_ASSET: dist/index.js
+        run: |
+          gh release delete ${{ env.RELEASE_TAG }} -y || true
+          gh release create ${{ env.RELEASE_TAG }} -t '${{ env.RELEASE_TITLE }}' || true
+          gh release upload ${{ env.RELEASE_TAG }} ${{ env.RELEASE_ASSET }} --clobber
