@@ -9,7 +9,7 @@ async function main() {
 
   await bot_instance.api.sendMessage(
     config.TELEGRAM_CHAT_ID,
-    `Please pay Winston@${config.PHONE_NUMBER}\nAmount: SG$${bill_per_pax}.\nThe price is calculated based on the current exchange rate.`
+    `Please pay Winston@${config.PHONE_NUMBER}\nAmount: SG$${bill_per_pax}.\n\nThe price is calculated based on the current exchange rate.`
   )
 }
 
