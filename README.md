@@ -1,7 +1,7 @@
 # chatgpt-bill-bot
 
 [![main.yml](https://github.com/winstxnhdw/chatgpt-bill-bot/actions/workflows/main.yml/badge.svg)](https://github.com/winstxnhdw/chatgpt-bill-bot/actions/workflows/main.yml)
-[![generate.yml](https://github.com/winstxnhdw/chatgpt-bill-bot/actions/workflows/generate.yml/badge.svg)](https://github.com/winstxnhdw/chatgpt-bill-bot/actions/workflows/generate.yml)
+[![announce.yml](https://github.com/winstxnhdw/chatgpt-bill-bot/actions/workflows/announce.yml/badge.svg)](https://github.com/winstxnhdw/chatgpt-bill-bot/actions/workflows/announce.yml)
 [![dependabot.yml](https://github.com/winstxnhdw/chatgpt-bill-bot/actions/workflows/dependabot.yml/badge.svg)](https://github.com/winstxnhdw/chatgpt-bill-bot/actions/workflows/dependabot.yml)
 
 Telegram cron bot for announcing the bill to members in a chat group.
