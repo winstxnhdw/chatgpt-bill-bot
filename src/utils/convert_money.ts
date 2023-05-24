@@ -16,7 +16,9 @@ const get_all_exchange_rates = async (): Promise<ExchangeRatesRequest> => {
   return request.json() as Promise<ExchangeRatesRequest>
 }
 
+export const convert_rates = (amount: number, from_rates: number, to_rates: number) => (amount / from_rates) * to_rates
+
 export const convert_money = async (amount: number, from: Currency, to: Currency) => {
   const exchange_rates = await get_all_exchange_rates()
-  return (amount / exchange_rates.rates[from]) * exchange_rates.rates[to]
+  return convert_rates(amount, exchange_rates.rates[from], exchange_rates.rates[to])
 }

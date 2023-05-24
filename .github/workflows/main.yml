@@ -23,7 +23,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 20.2.0
+          node-version: latest
           cache: 'yarn'
 
       - name: Install node dependencies
@@ -31,6 +31,9 @@ jobs:
 
       - name: Lint
         run: yarn lint
+
+      - name: Test
+        run: yarn testci
 
       - name: Build
         run: yarn build test

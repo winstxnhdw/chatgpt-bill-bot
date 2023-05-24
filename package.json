@@ -2,12 +2,19 @@
   "scripts": {
     "lint": "eslint .",
     "dev": "node -r @swc-node/register src/index.ts",
-    "build": "node -r @swc-node/register scripts/build.ts"
+    "build": "node -r @swc-node/register scripts/build.ts",
+    "test": "mocha -r @swc-node/register --extensions ts --watch --watch-files src 'tests/**/*.test.ts'",
+    "testci": "mocha -r @swc-node/register --extensions ts 'tests/**/*.test.ts'"
   },
   "dependencies": {
+    "@types/chai": "^4.3.5",
+    "@types/mocha": "^10.0.1",
+    "chai": "^4.3.7",
+    "decimal.js": "^10.4.3",
+    "dotenv": "^16.0.3",
     "envalid": "^7.3.1",
     "grammy": "^1.16.1",
-    "dotenv": "^16.0.3",
+    "mocha": "^10.2.0",
     "tslib": "^2.5.2"
   },
   "devDependencies": {

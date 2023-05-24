@@ -29,3 +29,17 @@ Build a human-readable bundle of your Node application. For debugging purposes.
 ```bash
 yarn build test
 ```
+
+### Test
+
+Run your tests with hot reloading.
+
+```bash
+yarn test
+```
+
+Run your tests without hot reloading. For testing in a CI pipeline.
+
+```bash
+yarn testci
+```
