@@ -1,4 +1,4 @@
-import { bankers_rounding } from '@/utils'
+import { bankers_rounding } from '@/utils/round'
 import { expect } from 'chai'
 
 describe('round', () => {

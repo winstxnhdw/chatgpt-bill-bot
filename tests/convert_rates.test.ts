@@ -1,4 +1,4 @@
-import { convert_rates } from '@/utils'
+import { convert_rates } from '@/utils/convert_rates'
 import { expect } from 'chai'
 
 describe('convert_rates', () => {
