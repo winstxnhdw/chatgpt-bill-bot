@@ -41,4 +41,4 @@ jobs:
           git config user.name "github-actions[bot]"
 
       - name: Announce Bill
-        run: curl -s -L https://github.com/winstxnhdw/$REPOSITORY_NAME/releases/download/latest/index.js | node
+        run: gh release download latest -O - | node
