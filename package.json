@@ -1,7 +1,7 @@
 {
   "scripts": {
     "lint": "eslint .",
-    "dev": "node -r dotenv/config -r @swc-node/register src/index.ts",
+    "dev": "node -r @swc-node/register src/index.ts",
     "build": "node -r @swc-node/register scripts/build.ts"
   },
   "dependencies": {

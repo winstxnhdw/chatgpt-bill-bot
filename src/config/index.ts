@@ -1,3 +1,4 @@
+import 'dotenv/config'
 import { cleanEnv, makeValidator, str } from 'envalid'
 import { env } from 'process'
 
