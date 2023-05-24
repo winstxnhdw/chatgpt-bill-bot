@@ -20,12 +20,12 @@ class Bot {
     return this.bot
   }
 
-  private set_plugins(): this {
-    this.set_conversations()
+  private set_conversations(): this {
     return this
   }
-
-  private set_conversations(): this {
+      
+  private set_plugins(): this {
+    this.set_conversations()
     return this
   }
 
