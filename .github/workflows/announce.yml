@@ -1,0 +1,42 @@
+name: Announce
+
+on:
+  workflow_dispatch:
+  schedule:
+    #       ┌──────────────── minute (0 - 59)
+    #       │ ┌────────────── hour (0 - 23)
+    #       │ │ ┌──────────── day of the month (1 - 31)
+    #       │ │ │ ┌────────── month (1 - 12 or JAN-DEC)
+    #       │ │ │ │ ┌──────── day of the week (0 - 6 or SUN-SAT)
+    #       │ │ │ │ │
+    #       │ │ │ │ │
+    #       │ │ │ │ │
+    #       * * * * *
+    - cron: 0 0 1 * *
+
+permissions:
+  contents: read
+
+jobs:
+  announce:
+    runs-on: ubuntu-latest
+    env:
+      TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+      TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+      FIXER_API_KEY: ${{ secrets.FIXER_API_KEY }}
+      PHONE_NUMBER: ${{ secrets.PHONE_NUMBER }}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+
+      - name: Set Git config
+        run: |
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git config user.name "github-actions[bot]"
+
+      - name: Announce Bill
+        run: curl -s -L https://github.com/winstxnhdw/$REPOSITORY_NAME/releases/download/latest/index.js | node
