@@ -23,7 +23,7 @@ class Bot {
   private set_conversations(): this {
     return this
   }
-      
+
   private set_plugins(): this {
     this.set_conversations()
     return this
