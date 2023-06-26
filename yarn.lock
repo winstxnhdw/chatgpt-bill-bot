@@ -144,10 +144,10 @@
   resolved "https://registry.yarnpkg.com/@eslint/js/-/js-8.43.0.tgz#559ca3d9ddbd6bf907ad524320a0d14b85586af0"
   integrity sha512-s2UHCoiXfxMvmfzqoN+vrQ84ahUSYde9qNO1MdxmoEhyHWsfmwOpFlwYV+ePJEVc7gFnATGUi376WowX1N7tFg==
 
-"@grammyjs/types@3.1.1":
-  version "3.1.1"
-  resolved "https://registry.yarnpkg.com/@grammyjs/types/-/types-3.1.1.tgz#dd80c018ffaf44bd89c56160edb3d9e86b84251f"
-  integrity sha512-nTNYvk+Al/nXZAMTEzPYEyW6pfgYgNuf/gxfx17kCxjHpAYhV+pcmROuD9eOBDLaBDh/hZJkQTIY6S3CfTAC0Q==
+"@grammyjs/types@3.1.2":
+  version "3.1.2"
+  resolved "https://registry.yarnpkg.com/@grammyjs/types/-/types-3.1.2.tgz#8240826266574e46b14a34783251b11528ce63f1"
+  integrity sha512-AsSkTUfZCfSEIacUBOQ94qLbZZy3UofkschWv4uBJKEHjuEfGnjeZZgiwhDfTDjmpmW+MbcasvS+FEfD2jiSLw==
 
 "@humanwhocodes/config-array@^0.11.10":
   version "0.11.10"
@@ -956,15 +956,15 @@ globby@^11.1.0:
     merge2 "^1.4.1"
     slash "^3.0.0"
 
-grammy@^1.16.2:
-  version "1.16.2"
-  resolved "https://registry.yarnpkg.com/grammy/-/grammy-1.16.2.tgz#c37f91221d49dcbe811af3dbf5e64bc6646b375f"
-  integrity sha512-Yex12ZuelqDQKH/gJ+6Fy/mdepUUIJtazLCdu+mD/r9j8abqB59hsx3UgmsWcp0k6hITo/G0aui84Y2q8FueyA==
+grammy@^1.17.0:
+  version "1.17.0"
+  resolved "https://registry.yarnpkg.com/grammy/-/grammy-1.17.0.tgz#1f55d070de5e8b021cb3072d50bb213e0c925e3a"
+  integrity sha512-iRkdKLFuct6zFO+Y3OnXTMU5bMEf6W7Le5GCQNjkkD7/95oqhFlkYAs6tiOW5T5WQ1EcwVZS7iVfiD67jaCK6Q==
   dependencies:
-    "@grammyjs/types" "3.1.1"
+    "@grammyjs/types" "3.1.2"
     abort-controller "^3.0.0"
     debug "^4.3.4"
-    node-fetch "^2.6.9"
+    node-fetch "^2.6.11"
 
 grapheme-splitter@^1.0.4:
   version "1.0.4"
@@ -1204,7 +1204,7 @@ natural-compare@^1.4.0:
   resolved "https://registry.yarnpkg.com/natural-compare/-/natural-compare-1.4.0.tgz#4abebfeed7541f2c27acfb29bdbbd15c8d5ba4f7"
   integrity sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==
 
-node-fetch@^2.6.9:
+node-fetch@^2.6.11:
   version "2.6.11"
   resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-2.6.11.tgz#cde7fc71deef3131ef80a738919f999e6edfff25"
   integrity sha512-4I6pdBY1EthSqDmJkiNk3JIT8cswwR9nfeW/cPdUagJYEQG7R95WRH74wpz7ma8Gh/9dI9FP+OU+0E4FvtA55w==
