@@ -961,10 +961,10 @@ globby@^11.1.0:
     merge2 "^1.4.1"
     slash "^3.0.0"
 
-grammy@^1.17.1:
-  version "1.17.1"
-  resolved "https://registry.yarnpkg.com/grammy/-/grammy-1.17.1.tgz#3ebfce14a69e94adc541d3e1943aff33be207052"
-  integrity sha512-ba1xsEVMoEjvTZNhOvSYt/dgoIFbMKYnFKHw3iioKYbQMCBsoX+FbO5hRse+sxhNwQzkDmiUtzAcK5elpEJg2w==
+grammy@^1.17.2:
+  version "1.17.2"
+  resolved "https://registry.yarnpkg.com/grammy/-/grammy-1.17.2.tgz#e6e081297b5d438c1344338e6b6013a3ddb7a2ec"
+  integrity sha512-5TuAzqxupkVcKXB5Jfl8F9GMXgGh/h/RcoOJThlQSJz2MMT2+2o+W/7C8ZULzrZ4TEB9TIIliPR6UW0J+1fT4w==
   dependencies:
     "@grammyjs/types" "3.1.2"
     abort-controller "^3.0.0"
