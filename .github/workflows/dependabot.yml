@@ -22,10 +22,10 @@ jobs:
         run: bun lint
 
       - name: Test
-        run: bun testci
+        run: bun test
 
       - name: Build
-        run: bun build test
+        run: bun run build test
 
   auto-merge:
     needs: build
