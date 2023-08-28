@@ -1,24 +1,22 @@
 import { convert_rates } from '@/utils/convert_rates'
-import { expect } from 'chai'
+import { expect, test } from 'bun:test'
 
-describe('convert_rates', () => {
-  const amount = 1
+const amount = 1
 
-  it('it should convert rates correctly', () => {
-    const from_rates = 1.0
-    const to_rates = 1.5
-    expect(convert_rates(amount, from_rates, to_rates)).to.equal(1.5)
-  })
+test('it should convert rates correctly', () => {
+  const from_rates = 1.0
+  const to_rates = 1.5
+  expect(convert_rates(amount, from_rates, to_rates)).toBe(1.5)
+})
 
-  it('it should convert rates correctly', () => {
-    const from_rates = 1.1
-    const to_rates = 2.2
-    expect(convert_rates(amount, from_rates, to_rates)).to.equal(2)
-  })
+test('it should convert rates correctly', () => {
+  const from_rates = 1.1
+  const to_rates = 2.2
+  expect(convert_rates(amount, from_rates, to_rates)).toBe(2)
+})
 
-  it('it should convert rates correctly', () => {
-    const from_rates = 1.2
-    const to_rates = 2.4
-    expect(convert_rates(amount, from_rates, to_rates)).to.equal(2)
-  })
+test('it should convert rates correctly', () => {
+  const from_rates = 1.2
+  const to_rates = 2.4
+  expect(convert_rates(amount, from_rates, to_rates)).toBe(2)
 })

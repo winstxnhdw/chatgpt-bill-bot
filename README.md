@@ -46,13 +46,13 @@ bun build test
 Run your tests with hot reloading.
 
 ```bash
-bun test
+bun run test
 ```
 
 Run your tests without hot reloading. For testing in a CI pipeline.
 
 ```bash
-bun testci
+bun test
 ```
 
 You can run an end-to-end test with the following command.
