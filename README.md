@@ -24,13 +24,13 @@ Populate the `.env` file.
 Install all dependencies.
 
 ```bash
-yarn
+bun install
 ```
 
 Run your application.
 
 ```bash
-yarn dev
+bun dev
 ```
 
 ### Build
@@ -38,7 +38,7 @@ yarn dev
 Build a human-readable bundle of your Node application. For debugging purposes.
 
 ```bash
-yarn build test
+bun build test
 ```
 
 ### Test
@@ -46,17 +46,17 @@ yarn build test
 Run your tests with hot reloading.
 
 ```bash
-yarn test
+bun test
 ```
 
 Run your tests without hot reloading. For testing in a CI pipeline.
 
 ```bash
-yarn testci
+bun testci
 ```
 
 You can run an end-to-end test with the following command.
 
 ```bash
-yarn e2e
+bun e2e
 ```

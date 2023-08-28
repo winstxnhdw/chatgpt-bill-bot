@@ -8,8 +8,6 @@
     "testci": "mocha -r @swc-node/register --extensions ts 'tests/**/*.test.ts'"
   },
   "dependencies": {
-    "@types/chai": "^4.3.5",
-    "@types/mocha": "^10.0.1",
     "chai": "^4.3.8",
     "decimal.js": "^10.4.3",
     "dotenv": "^16.3.1",
@@ -19,8 +17,9 @@
     "tslib": "^2.6.2"
   },
   "devDependencies": {
+    "@types/chai": "^4.3.5",
+    "@types/mocha": "^10.0.1",
     "@swc-node/register": "^1.6.7",
-    "@swc/core": "^1.3.80",
     "@types/node": "^20.5.7",
     "@typescript-eslint/eslint-plugin": "^5.62.0",
     "@typescript-eslint/parser": "^5.62.0",

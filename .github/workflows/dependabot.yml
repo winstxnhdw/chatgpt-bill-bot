@@ -10,23 +10,22 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v1
         with:
-          node-version: latest
-          cache: 'yarn'
+          bun-version: latest
 
       - name: Install node dependencies
-        run: yarn --frozen-lockfile
+        run: bun install --frozen-lockfile
 
       - name: Lint
-        run: yarn lint
+        run: bun lint
 
       - name: Test
-        run: yarn testci
+        run: bun testci
 
       - name: Build
-        run: yarn build test
+        run: bun build test
 
   auto-merge:
     needs: build
