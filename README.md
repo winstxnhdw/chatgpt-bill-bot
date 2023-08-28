@@ -38,7 +38,7 @@ bun dev
 Build a human-readable bundle of your Node application. For debugging purposes.
 
 ```bash
-bun run build test
+bun run build -t
 ```
 
 ### Test
