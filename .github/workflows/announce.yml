@@ -20,15 +20,17 @@ jobs:
 
     steps:
       - name: Setup Node.js
-        uses: actions/setup-node@v3
+        uses: oven-sh/setup-bun@v1
         with:
-          node-version: latest
+          bun-version: latest
 
       - name: Announce Bill
-        run: curl -sL https://github.com/$GITHUB_REPOSITORY_OWNER/$REPOSITORY_NAME/releases/download/latest/index.js | node
         env:
           REPOSITORY_NAME: ${{ github.event.repository.name }}
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
           FIXER_API_KEY: ${{ secrets.FIXER_API_KEY }}
           PHONE_NUMBER: ${{ secrets.PHONE_NUMBER }}
+        run: |
+          curl -sLO https://github.com/$GITHUB_REPOSITORY_OWNER/$REPOSITORY_NAME/releases/download/latest/index.js
+          bun index.js
