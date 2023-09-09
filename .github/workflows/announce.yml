@@ -19,18 +19,20 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Setup Node.js
+      - name: Setup Bun
         uses: oven-sh/setup-bun@v1
         with:
           bun-version: latest
 
-      - name: Announce Bill
+      - name: Download Bundle
+        run: curl -sLO https://github.com/$GITHUB_REPOSITORY_OWNER/$REPOSITORY_NAME/releases/download/latest/index.js
         env:
           REPOSITORY_NAME: ${{ github.event.repository.name }}
+
+      - name: Announce Bill
+        run: bun index.js
+        env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
           FIXER_API_KEY: ${{ secrets.FIXER_API_KEY }}
           PHONE_NUMBER: ${{ secrets.PHONE_NUMBER }}
-        run: |
-          curl -sLO https://github.com/$GITHUB_REPOSITORY_OWNER/$REPOSITORY_NAME/releases/download/latest/index.js
-          bun index.js
