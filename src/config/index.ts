@@ -1,4 +1,3 @@
-import 'dotenv/config'
 import { cleanEnv, makeValidator, str } from 'envalid'
 
 export const token = makeValidator((token) => {
