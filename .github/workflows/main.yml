@@ -4,11 +4,11 @@ on:
   push:
     branches: [main]
     paths:
-      - src/**
-      - tests/**
+      - '**.ts'
       - .github/workflows/main.yml
-      - package.json
       - tsconfig.json
+      - package.json
+      - bun.lockb
 
 permissions:
   contents: write
