@@ -12,15 +12,17 @@ async function main() {
     `Please pay Winston@${config.PHONE_NUMBER}\nAmount: SG$${bill_per_pax}\n\nThe price is calculated based on the current exchange rate.`
   )
 
+  const poll_options = {
+    is_anonymous: false,
+    type: 'quiz',
+    correct_option_id: 0
+  }
+  
   await bot.api.sendPoll(
     config.TELEGRAM_CHAT_ID,
     'Have you paid?',
     ['Paid 🤩', 'I am a stupid brokie who has not paid 😭'],
-    {
-      is_anonymous: false,
-      type: 'quiz',
-      correct_option_id: 0
-    }
+    poll_options
   )
 }
 
