@@ -60,3 +60,9 @@ You can run an end-to-end test with the following command.
 ```bash
 bun e2e
 ```
+
+You can get the chat ID of a active Telegram chat group with the following command.
+
+```bash
+bun chat
+```

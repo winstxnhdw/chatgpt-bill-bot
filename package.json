@@ -3,8 +3,9 @@
     "lint": "eslint .",
     "dev": "bun src/index.ts",
     "build": "bun scripts/build.ts",
+    "test": "bun test --watch",
     "e2e": "bun scripts/test.ts",
-    "test": "bun test --watch"
+    "chat": "bun scripts/get_chat_id.ts"
   },
   "dependencies": {
     "decimal.js": "^10.4.3",
