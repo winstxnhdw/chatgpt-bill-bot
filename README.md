@@ -35,10 +35,16 @@ bun dev
 
 ### Build
 
-Build a human-readable bundle of your Node application. For debugging purposes.
+Build a non-minified binary of your Bun application. For debugging purposes.
 
 ```bash
-bun run build -t
+bun run build
+```
+
+Build a production-ready binary of your Bun application.
+
+```bash
+bun run build --minify
 ```
 
 ### Test

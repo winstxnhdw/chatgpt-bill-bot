@@ -36,14 +36,14 @@ jobs:
         run: bun test
 
       - name: Build
-        run: bun run build
+        run: bun run build --minify
 
       - name: Deploy
         env:
           GH_TOKEN: ${{ github.token }}
           RELEASE_TAG: latest
           RELEASE_TITLE: Build
-          RELEASE_ASSET: dist/index.js
+          RELEASE_ASSET: dist/Bot
         run: |
           gh release delete $RELEASE_TAG -y || true
           gh release create $RELEASE_TAG -t $RELEASE_TITLE || true

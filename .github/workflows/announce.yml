@@ -19,16 +19,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Setup Bun
-        uses: oven-sh/setup-bun@v1
-        with:
-          bun-version: latest
-
       - name: Download Bundle
-        run: curl -sLO https://github.com/$GITHUB_REPOSITORY/releases/download/latest/index.js
+        run: curl -sLO https://github.com/$GITHUB_REPOSITORY/releases/download/latest/Bot
 
       - name: Announce Bill
-        run: bun index.js
+        run: ./Bot
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}

@@ -2,7 +2,7 @@
   "scripts": {
     "lint": "eslint .",
     "dev": "bun src/index.ts",
-    "build": "bun scripts/build.ts",
+    "build": "bun build src/index.ts --outfile dist/Bot --compile",
     "test": "bun test --watch",
     "e2e": "bun scripts/test.ts",
     "chat": "bun scripts/get_chat_id.ts"
