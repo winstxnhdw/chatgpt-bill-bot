@@ -19,8 +19,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Download Bundle
+      - name: Download Binary
         run: curl -sLO https://github.com/$GITHUB_REPOSITORY/releases/download/latest/Bot
+
+      - name: Make Binary Executable
+        run: chmod +x Bot
 
       - name: Announce Bill
         run: ./Bot
