@@ -1,14 +1,10 @@
-import { cleanEnv, makeValidator, num, str } from 'envalid'
+import { coerce, object, string } from 'zod'
 
-export const token = makeValidator((token) => {
-  if (typeof token !== 'string') throw new Error('Token must be a string.')
-  if (!/^[0-9]+:[a-zA-Z0-9]+-.[\s\S]+/.test(token)) throw new Error('Invalid token.')
-  return token
-})
-
-export const config = cleanEnv(Bun.env, {
-  TELEGRAM_BOT_TOKEN: token(),
-  TELEGRAM_CHAT_ID: num(),
-  FIXER_API_KEY: str(),
-  PHONE_NUMBER: str()
-})
+export const config = object({
+  TELEGRAM_BOT_TOKEN: string().regex(/^[0-9]+:[a-zA-Z0-9]+-.[\s\S]+/, {
+    message: 'Invalid token.'
+  }),
+  TELEGRAM_CHAT_ID: coerce.number(),
+  FIXER_API_KEY: string(),
+  PHONE_NUMBER: coerce.number()
+}).parse(Bun.env)

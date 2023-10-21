@@ -16,8 +16,8 @@ async function main() {
     is_anonymous: false,
     type: 'quiz',
     correct_option_id: 0
-  }
-  
+  } as const
+
   await bot.api.sendPoll(
     config.TELEGRAM_CHAT_ID,
     'Have you paid?',
