@@ -1,0 +1,43 @@
+name: Release
+
+on:
+  push:
+    branches: main
+    paths: .github/workflows/release.yml
+  workflow_run:
+    workflows: Test
+    branches: main
+    types: completed
+
+permissions:
+  contents: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4.1.1
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v1.1.1
+        with:
+          bun-version: latest
+
+      - name: Install node dependencies
+        run: bun install --frozen-lockfile
+
+      - name: Build
+        run: bun run build --minify
+
+      - name: Deploy
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RELEASE_TAG: latest
+          RELEASE_TITLE: Build
+          RELEASE_ASSET: dist/*
+        run: |
+          gh release delete $RELEASE_TAG -y || true
+          gh release create $RELEASE_TAG -t $RELEASE_TITLE || true
+          gh release upload $RELEASE_TAG $RELEASE_ASSET --clobber

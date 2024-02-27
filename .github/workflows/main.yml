@@ -1,50 +1,16 @@
-name: Deploy
+name: Test
 
 on:
   push:
-    branches: [main]
     paths:
-      - '**.ts'
       - .github/workflows/main.yml
+      - .eslintrc
+      - .eslintignore
       - tsconfig.json
       - package.json
       - bun.lockb
-
-permissions:
-  contents: write
+      - '*.ts'
 
 jobs:
-  deploy:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: Setup Bun
-        uses: oven-sh/setup-bun@v1
-        with:
-          bun-version: latest
-
-      - name: Install node dependencies
-        run: bun install --frozen-lockfile
-
-      - name: Lint
-        run: bun lint
-
-      - name: Test
-        run: bun test
-
-      - name: Build
-        run: bun run build --minify
-
-      - name: Deploy
-        env:
-          GH_TOKEN: ${{ github.token }}
-          RELEASE_TAG: latest
-          RELEASE_TITLE: Build
-          RELEASE_ASSET: dist/*
-        run: |
-          gh release delete $RELEASE_TAG -y || true
-          gh release create $RELEASE_TAG -t $RELEASE_TITLE || true
-          gh release upload $RELEASE_TAG $RELEASE_ASSET --clobber
+  test:
+    uses: winstxnhdw/actions/.github/workflows/bun.yml@main
