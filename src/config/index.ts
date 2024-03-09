@@ -6,5 +6,6 @@ export const config = object({
   }),
   TELEGRAM_CHAT_ID: coerce.number(),
   FIXER_API_KEY: string(),
-  PHONE_NUMBER: coerce.number()
+  PHONE_NUMBER: coerce.number(),
+  PAYLAH_LINK: string().url()
 }).parse(Bun.env)

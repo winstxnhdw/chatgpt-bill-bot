@@ -1,6 +1,6 @@
 import { config } from '@/config'
+import { Bot } from 'grammy'
 import type { UserFromGetMe } from 'grammy/types'
-import { Bot } from 'grammy/web'
 
 export const bot = new Bot(config.TELEGRAM_BOT_TOKEN, {
   botInfo: {
