@@ -14,7 +14,7 @@ type Currency = keyof Rates
 
 const get_all_exchange_rates = async (): Promise<ExchangeRatesRequest> => {
   const request = await fetch(`http://data.fixer.io/api/latest?access_key=${config.FIXER_API_KEY}`)
-  return request.json()
+  return request.json() as unknown as ExchangeRatesRequest
 }
 
 export const convert_money = async (amount: number, from: Currency, to: Currency): Promise<number> => {
