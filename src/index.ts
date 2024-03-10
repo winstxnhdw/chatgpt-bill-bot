@@ -11,7 +11,8 @@ async function main() {
 
   const buffer_array = await generate_code({
     number: `+65${config.PHONE_NUMBER}`,
-    amount: bill_per_pax
+    amount: bill_per_pax,
+    comments: 'Payment for ChatGPT'
   })
 
   if (!buffer_array) {
