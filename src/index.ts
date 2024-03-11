@@ -13,6 +13,7 @@ async function main() {
     number: `+65${config.PHONE_NUMBER}`,
     amount: bill_per_pax,
     comments: 'Payment for ChatGPT',
+    days_before_expiry: 5,
     type: 'image/webp'
   })
 
