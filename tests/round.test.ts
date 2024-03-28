@@ -24,7 +24,7 @@ test('it should always round floats correctly', () => {
     '64.3869': 64.39,
     '-72.5473': -72.55,
     '80.6145': 80.61,
-    '-88.8395': -88.84
+    '-88.8395': -88.84,
   }
 
   for (const [input, expected_output] of Object.entries(test_cases)) {
