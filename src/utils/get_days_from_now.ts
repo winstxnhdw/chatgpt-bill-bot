@@ -1,4 +1,4 @@
-import { ExpiryDate } from 'sgqr'
+import type { ExpiryDate } from 'sgqr'
 
 export function get_days_from_now(days: number): ExpiryDate {
   const date = new Date()
