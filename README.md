@@ -18,6 +18,7 @@ Populate the `.env` file.
   echo "TELEGRAM_CHAT_ID=$TELEGRAM_CHAT_ID"
   echo "FIXER_API_KEY=$FIXER_API_KEY"
   echo "PHONE_NUMBER=$PHONE_NUMBER"
+  echo "PAYLAH_LINK=$PAYLAH_LINK"
 } >> .env
 ```
 
