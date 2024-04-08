@@ -8,4 +8,5 @@ export const config = object({
   FIXER_API_KEY: string(),
   PHONE_NUMBER: coerce.number(),
   PAYLAH_LINK: string().url(),
+  PROXY_LINK: string().url(),
 }).parse(Bun.env)

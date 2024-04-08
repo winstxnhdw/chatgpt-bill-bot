@@ -26,7 +26,12 @@ async function main() {
 
   const inline_keyboard = new InlineKeyboard()
     .url('Google Pay', 'https://gpay.app.goo.gl/vUM9xd')
+    .row()
     .url('DBS PayLah!', config.PAYLAH_LINK)
+    .row()
+    .url('DBS digibank', `${config.PROXY_LINK}?endpoint=dbsdigibank://`)
+    .row()
+    .url('OCBC Digital', `${config.PROXY_LINK}?endpoint=ocbc://`)
 
   await bot.api.sendPhoto(config.TELEGRAM_CHAT_ID, new InputFile(data), {
     caption: `Congratulations, <b>you won a BILL!</b>\nAmount: SG$${bill_per_pax}\n\nThe price is calculated based on the current exchange rate.`,
