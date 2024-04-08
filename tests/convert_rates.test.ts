@@ -1,5 +1,5 @@
-import { convert_rates } from '@/utils/convert_rates'
 import { expect, test } from 'bun:test'
+import { convert_rates } from '@/utils/convert_rates'
 
 const amount = 1
 

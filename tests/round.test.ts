@@ -1,5 +1,5 @@
-import { bankers_rounding } from '@/utils/round'
 import { expect, test } from 'bun:test'
+import { bankers_rounding } from '@/utils/round'
 
 test('it should return a number', () => expect(bankers_rounding(0.0, 2)).toBeNumber())
 
