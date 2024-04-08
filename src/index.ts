@@ -29,9 +29,9 @@ async function main() {
     .row()
     .url('DBS PayLah!', config.PAYLAH_LINK)
     .row()
-    .url('DBS digibank', `${config.PROXY_LINK}?endpoint=dbsdigibank://`)
+    .url('DBS digibank (iOS)', `${config.PROXY_LINK}?endpoint=dbsdigibank://`)
     .row()
-    .url('OCBC Digital', `${config.PROXY_LINK}?endpoint=ocbc://`)
+    .url('OCBC Digital (iOS)', `${config.PROXY_LINK}?endpoint=ocbc://`)
 
   await bot.api.sendPhoto(config.TELEGRAM_CHAT_ID, new InputFile(data), {
     caption: `Congratulations, <b>you won a BILL!</b>\nAmount: SG$${bill_per_pax}\n\nThe price is calculated based on the current exchange rate.`,
