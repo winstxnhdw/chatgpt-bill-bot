@@ -12,7 +12,7 @@
     "grammy": "^1.22.4",
     "sgqr": "^0.8.0",
     "tslib": "^2.6.2",
-    "zod": "^3.22.5"
+    "zod": "^3.23.0"
   },
   "devDependencies": {
     "@biomejs/biome": "1.7.0",
