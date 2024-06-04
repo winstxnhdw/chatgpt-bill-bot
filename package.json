@@ -11,7 +11,7 @@
     "decimal.js": "^10.4.3",
     "grammy": "^1.24.1",
     "sgqr": "^0.8.0",
-    "tslib": "^2.6.2",
+    "tslib": "^2.6.3",
     "zod": "^3.23.8"
   },
   "devDependencies": {
