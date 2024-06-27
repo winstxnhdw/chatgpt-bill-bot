@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "decimal.js": "^10.4.3",
-    "grammy": "^1.25.1",
+    "grammy": "^1.25.2",
     "sgqr": "^0.8.0",
     "tslib": "^2.6.3",
     "zod": "^3.23.8"
