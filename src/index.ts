@@ -29,6 +29,7 @@ async function main() {
     .url('DBS PayLah!', config.PAYLAH_LINK)
     .row()
     .url('DBS digibank (iOS)', `${config.PROXY_LINK}?endpoint=dbsdigibank://`)
+    .row()
     .url('OCBC Digital (iOS)', `${config.PROXY_LINK}?endpoint=ocbc://`)
 
   await bot.api.sendPhoto(config.TELEGRAM_CHAT_ID, new InputFile(data), {
