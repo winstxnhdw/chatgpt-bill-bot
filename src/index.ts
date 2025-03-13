@@ -7,7 +7,7 @@ import { generate_code } from 'sgqr'
 
 async function main() {
   const member_count = await bot.api.getChatMemberCount(config.TELEGRAM_CHAT_ID)
-  const bill = await convert_money(23, 'USD', 'SGD')
+  const bill = await convert_money(24, 'USD', 'SGD')
   const bill_per_pax = bankers_rounding(bill / (member_count - 1), 2).toFixed(2) as Amount
   const phone_number = config.PHONE_NUMBER as unknown as NumberString
 
